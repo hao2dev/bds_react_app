@@ -3,6 +3,7 @@ h2 {
     font-size: 2rem;
     line-height: 1.3;
     font-weight: bold;
+    color: black !important;
 }
 
 .cart-row {
