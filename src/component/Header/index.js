@@ -9,7 +9,7 @@ export default class index extends Component {
             
                 <nav className="navbar navbar-expand-lg navbar-light">
                     <div className="container">
-                        <img src={logo} alt="/" href='/#' />
+                        <Link to="/"><img src={logo} alt="#"/></Link>
                         <a className="navbar-brand" src={logo} href="/#"> </a>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon" />
@@ -25,7 +25,7 @@ export default class index extends Component {
                                     <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                         <Link className="dropdown-item" to="/northProduct">Dự án các tỉnh ở Phía Bắc</Link>
                                         <Link className="dropdown-item" to="/southProduct">Dự án các tỉnh ở phía Nam </Link>
-                                        <Link className="dropdown-item" to="/productManager">Quản lý dự án</Link>
+                                        <Link className="dropdown-item" to="/productManager">Dự án đã thích</Link>
                                     </div>
                                 </li>
                                 <li className="nav-item">

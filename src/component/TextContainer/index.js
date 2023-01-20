@@ -15,7 +15,7 @@ export default class index extends Component {
                             <li><i className="far fa-check-circle" aria-hidden="true" /></li>
                             <li>Chúng tôi là một đại lý bất động sản được cấp phép đầy đủ</li>
                             <li><i className="far fa-check-circle" aria-hidden="true" /></li>
-                            <li>Chúng tôi tính phí cố định 10.000.000đ + VAT – không có phụ phí ẩn</li>
+                            <li>Chúng tôi tính phí cố định 10.000.000đ + VAT - không có phụ phí ẩn</li>
                             <li><i className="far fa-check-circle" aria-hidden="true" /></li>
                             <li>Dấu hiệu rao bán hấp dẫn được ghi đầy đủ trên tất cả dự án</li>
                             <li><i className="far fa-check-circle" aria-hidden="true" /></li>

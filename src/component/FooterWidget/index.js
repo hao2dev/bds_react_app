@@ -28,7 +28,7 @@ export default class index extends Component {
                             </a>
                         </div>
                         <div className="col-md-6 col-lg-3 mt-5 mt-lg-0 text-center">
-                            <a href="contact.html" className="btn">Đặt một câu hỏi</a>
+                            <Link to="/contact" className="btn">Đặt một câu hỏi</Link>
                         </div>
                         <div className="col-md-6 col-lg-3 mt-5 mt-lg-0 text-center">
                             <Link to="/advise" className="btn">Yêu cầu thẩm định</Link>

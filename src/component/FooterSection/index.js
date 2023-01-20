@@ -34,8 +34,8 @@ export default class index extends Component {
                                 <ul className="pl-0">
                                     <li><Link to="/northProduct">Dự án</Link></li>
                                     <li><Link to="/advise">Thế chấp</Link></li>
-                                    <li><a href="request-valuation.html">Yêu cầu định giá</a></li>
-                                    <li><a href="contact.html">Liên hệ</a></li>
+                                    <li><Link to="/request-valuetion">Yêu cầu định giá</Link></li>
+                                    <li><Link to="/contact">Liên hệ</Link></li>
                                 </ul>
                             </div>
                             <div className="col-md-12 mt-3 text-center social-media">

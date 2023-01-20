@@ -120,7 +120,7 @@ export default class index extends Component {
                                         bạn cần một cố vấn có kinh nghiệm ở góc của bạn nêu chi tiết các tùy chọn có sẵn và cho bạn lời khuyên cũng như hỗ trợ bạn cần.</p>
                                     {/* Button trigger modal */}
                                     <div className="text-center">
-                                        <button type="button" className="contact-btn" data-toggle="modal" data-target="#contactModal">Liên hệ chúng tôi</button>
+                                        <ModalBox title="Liên hệ chúng tôi" content={content} />
                                     </div>
                                 </div>
                                 <div className="col-md-5 mt-5 pt-md-3 pt-lg-0">
@@ -143,7 +143,7 @@ export default class index extends Component {
                                         ngay trong suốt quá trình thế chấp</p>
                                     {/* Button trigger modal */}
                                     <div className="text-center">
-                                        <button type="button" className="contact-btn" data-toggle="modal" data-target="#contactModal">Liên hệ chúng tôi</button>
+                                        <ModalBox title="Liên hệ chúng tôi" content={content} />
                                     </div>
                                 </div>
                             </div>
@@ -164,7 +164,7 @@ export default class index extends Component {
                                             và tính xem bạn được hưởng bao nhiêu.</p>
                                         {/* Button trigger modal */}
                                         <div className="text-center">
-                                            <button type="button" className="contact-btn" data-toggle="modal" data-target="#contactModal">Liên hệ chúng tôi</button>
+                                            <ModalBox title="Liên hệ chúng tôi" content={content} />
                                         </div>
                                     </div>
                                     <div className="col-md-5 mt-5 pt-md-3 pt-lg-0">
@@ -187,7 +187,7 @@ export default class index extends Component {
                                             thế chấp mua để cho thuê tốt nhất đáp ứng nhu cầu của bạn.</p>
                                         {/* Button trigger modal */}
                                         <div className="text-center">
-                                            <button type="button" className="contact-btn" data-toggle="modal" data-target="#contactModal">Liên hệ chúng tôi</button>
+                                            <ModalBox title="Liên hệ chúng tôi" content={content} />
                                         </div>
                                     </div>
                                 </div>

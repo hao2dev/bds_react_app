@@ -34,7 +34,7 @@ export default class index extends Component {
                                         <span>1 phòng ngủ</span>
                                         <span>1 nhà tắm<span>
                                         </span></span></div>
-                                    <Link to="/productManager" className="btn">Thêm dự án</Link>
+                                    <Link to="/" className="btn">Thích dự án</Link>
                                 </div>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ export default class index extends Component {
                                         <span>3 phòng ngủ</span>
                                         <span>1 nhà tắm</span>
                                     </div>
-                                    <Link to="/productManager" className="btn">Thêm dự án</Link>
+                                    <Link to="/" className="btn">Thích dự án</Link>
                                 </div>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ export default class index extends Component {
                                         <span>3 phòng ngủ</span>
                                         <span>2 nhà tắm</span>
                                     </div>
-                                    <Link to="/productManager" className="btn">Thêm dự án</Link>
+                                    <Link to="/" className="btn">Thích dự án</Link>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +86,7 @@ export default class index extends Component {
                                         <span>4 phòng ngủ</span>
                                         <span>2 nhà tắm</span>
                                     </div>
-                                    <Link to="/productManager" className="btn">Thêm dự án</Link>
+                                    <Link to="/" className="btn">Thích dự án</Link>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +103,7 @@ export default class index extends Component {
                                         <span>4 phòng ngủ</span>
                                         <span>3 nhà tắm</span>
                                     </div>
-                                    <Link to="/productManager" className="btn">Thêm dự án</Link>
+                                    <Link to="/" className="btn">Thích dự án</Link>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +120,7 @@ export default class index extends Component {
                                         <span>4 phòng ngủ</span>
                                         <span>3 nhà tắm</span>
                                     </div>
-                                    <Link to="/productManager" className="btn">Thêm dự án</Link>
+                                    <Link to="/" className="btn">Thích dự án</Link>
                                 </div>
                             </div>
                         </div>
