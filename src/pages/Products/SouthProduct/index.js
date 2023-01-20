@@ -46,7 +46,7 @@ export default class index extends Component {
                                     </div>
                                     <hr />
                                     <div className="text-center">
-                                        <a href="projects.html">Thêm dự án<i className="fas fa-long-arrow-alt-right ml-2" /></a>
+                                        <a href="/">Thích dự án<i className="fas fa-long-arrow-alt-right ml-2" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -77,7 +77,7 @@ export default class index extends Component {
                                     </div>
                                     <hr />
                                     <div className="text-center">
-                                        <a href="projects.html">Thêm dự án<i className="fas fa-long-arrow-alt-right ml-2" /></a>
+                                        <a href="/">Thích dự án<i className="fas fa-long-arrow-alt-right ml-2" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -108,7 +108,7 @@ export default class index extends Component {
                                     </div>
                                     <hr />
                                     <div className="text-center">
-                                        <a href="projects.html">Thêm dự án<i className="fas fa-long-arrow-alt-right ml-2" /></a>
+                                        <a href="/">Thích dự án<i className="fas fa-long-arrow-alt-right ml-2" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -138,7 +138,7 @@ export default class index extends Component {
                                         </div>
                                         <hr />
                                         <div className="text-center">
-                                            <a href="projects.html">Thêm dự án<i className="fas fa-long-arrow-alt-right ml-2" /></a>
+                                            <a href="/">Thích dự án<i className="fas fa-long-arrow-alt-right ml-2" /></a>
                                         </div>
                                     </div>
                                 </div>
@@ -169,7 +169,7 @@ export default class index extends Component {
                                         </div>
                                         <hr />
                                         <div className="text-center">
-                                            <a href="projects.html">Thêm dự án<i className="fas fa-long-arrow-alt-right ml-2" /></a>
+                                            <a href="/">Thích dự án<i className="fas fa-long-arrow-alt-right ml-2" /></a>
                                         </div>
                                     </div>
                                 </div>
