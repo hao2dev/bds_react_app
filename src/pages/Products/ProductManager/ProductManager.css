@@ -8,6 +8,7 @@ h2 {
 
 .cart-row {
     display: flex;
+    margin-bottom: 20px;
 }
 
 .cart-item {

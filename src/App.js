@@ -18,13 +18,6 @@ import Contact from './pages/Contacts/Contact'
 function App() {
   return (
     <div >
-
-
-
-
-
-
-      
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/northProduct' element={<NorthProduct/>} />
