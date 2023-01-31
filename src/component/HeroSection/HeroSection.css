@@ -3,6 +3,7 @@
 .carousel-caption h2 {
     font-family: 'Anton', sans-serif;
     font-size: 3.5rem;
+    color: white !important;
 }
 
 .carousel-item p {
