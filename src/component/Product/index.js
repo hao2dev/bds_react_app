@@ -27,7 +27,7 @@ const Product = ({ img, price, title, bed, bathtub, area }) => {
     setTimeout(() => setToggleAlert(false), 2000);
   }, [toggleAlert]);
   return (
-    <>
+    <div className="col-md-6 col-lg-3">
       {toggleAlert && (
         <div className="message__box">
           <Alert message="Đã thêm vào mục yêu thích" type="success" showIcon />;
@@ -65,7 +65,7 @@ const Product = ({ img, price, title, bed, bathtub, area }) => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

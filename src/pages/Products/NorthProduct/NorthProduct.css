@@ -76,9 +76,9 @@
     padding: 0 10px;
     justify-content: flex-start;
 }
-.box1{
+/* .box1{
     width: calc(100% / 4);
-}
+} */
 /*=====================Start Media Queries======================*/
 
 @media only screen and (max-width: 767px) {

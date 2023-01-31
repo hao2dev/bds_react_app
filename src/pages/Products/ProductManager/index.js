@@ -59,10 +59,10 @@ const ProductLikePage = () => {
             <h2>No data !!</h2>
           )}
         </div>
-        <div className="cart-total">
+        {/* <div className="cart-total">
           <strong className="cart-total-title">Tổng</strong>
           <span className="cart-total-price">3.000.000.000 đ</span>
-        </div>
+        </div> */}
       </div>
       <FooterSection />
     </div>
