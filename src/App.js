@@ -3,8 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import '././firebase/connect.js';
 import './assets/style/App.css';
 import Home from './pages/Home';
-import Login from './pages/register/Login';
-import Signup from './pages/register/Signup';
+
 import NorthProduct from './pages/Products/NorthProduct';
 import SouthProduct from './pages/Products/SouthProduct';
 import ProductManager from './pages/Products/ProductManager';
@@ -22,6 +21,8 @@ import Add from './AdminScreen/Menu/Product/Add';
 import Edit from './AdminScreen/Menu/Product/Edit';
 import Help from './AdminScreen/Menu/Help';
 import ProductsList from './AdminScreen/Menu/Product/ProductsList/index.js';
+import Login from './pages/register/Login/Login.js';
+import Register from './pages/register/Signup/Register.js';
 
 function App() {
   return (
@@ -36,8 +37,9 @@ function App() {
         <Route path='/advice' element={<Advice />} />
         <Route path='/request-valuetion' element={<RequestValue />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<Signup />} />
+        <Route path='/login' element={<Login/>} />
+        <Route path='/signup' element={<Register/>}/>
+       
 
         <Route path='/admin' element={<AdminManager />} />
         <Route path='/admin/adduser' element={<AddUser />} />
