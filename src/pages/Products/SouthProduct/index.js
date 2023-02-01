@@ -23,7 +23,7 @@ const Products = () => {
     const dbRef = ref(getDatabase());
     get(child(dbRef, `product1/`)).then((snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
+        // console.log(snapshot.val());
         setProducts(Object.values(snapshot.val()));
       } else {
         console.log("No data available");
@@ -39,7 +39,6 @@ const Products = () => {
         <Header />
         <section className="local-property-card-section pt-md-5">
           <h1>Các dự án ở phía Nam</h1>
-
           <div className="content">
             <div className="row">
                 {products.map((data) => {

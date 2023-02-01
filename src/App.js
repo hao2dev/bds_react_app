@@ -16,6 +16,15 @@ import Research from './pages/About/Research'
 import Advice from './pages/About/Advice'
 import RequestValue from './pages/Contacts/RequestValue'
 import Contact from './pages/Contacts/Contact'
+import AddUser from './AdminScreen/Menu/User/AddUser';
+import AdminManager from './AdminScreen/AdminManager';
+import RemoveUser from './AdminScreen/Menu/User/RemoveUser';
+import AddShipment from './AdminScreen/Menu/Shipment/AddShipment';
+import Query from './AdminScreen/Menu/Shipment/Query';
+import Remove from './AdminScreen/Menu/Product/Remove';
+import Add from './AdminScreen/Menu/Product/Add';
+import Edit from './AdminScreen/Menu/Product/Edit';
+import Help from './AdminScreen/Menu/Help';
 
 
 
@@ -37,6 +46,19 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
+
+
+        
+        <Route path='/admin' element={<AdminManager/>} />
+        <Route path='/admin/adduser' element={<AddUser />} />
+        <Route path='/admin/removeuser' element={<RemoveUser />} />
+        <Route path='/admin/addshipment' element={<AddShipment />} />
+        <Route path='/admin/query' element={<Query />} />
+        <Route path='/admin/addproduct' element={<Add />} />
+        <Route path='/admin/editproduct' element={<Edit />} />
+        <Route path='/admin/deleteproduct' element={<Remove />} />
+        <Route path='/admin/help' element={<Help />} />
+  
       </Routes>
     </div>
   );
