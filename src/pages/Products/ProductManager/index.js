@@ -21,6 +21,7 @@ const ProductLikePage = () => {
   const getProductLike = () => {
     setProduct(productLike);
   };
+  //Change product in depen
   useEffect(() => {
     getProductLike();
   }, []);
