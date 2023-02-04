@@ -10,7 +10,7 @@ import FooterSection from '../../../component/FooterSection';
 import Header from '../../../component/Header';
 import doolin_house_dublin01 from '../../../assets/img/index/doolin-house-dublin01.jpeg';
 import { db } from '../../../firebase/connect';
-import { collection, query, where, getDocs } from 'firebase/firestore';
+import { collection, query, where, getDocs, onSnapshot } from 'firebase/firestore';
 // import glasnevin_dublin01 from "../../../assets/img/index/glasnevin-dublin01.jpeg";
 // import templeogue_dublin01 from "../../../assets/img/index/templeogue-dublin01.jpeg";
 // import charlotte_quay_dublin01 from "../../../assets/img/index/charlotte-quay-dublin01.jpeg";
@@ -23,16 +23,17 @@ const Products = () => {
   useEffect(() => {
     const getProducts = async () => {
       const q = query(
-        collection(db, 'products'),
-        where('category', '==', 'south')
+        collection(db, "products"),
+        where("category", "==", "south")
       );
-      const querySnapshot = await getDocs(q);
-      let data = [];
-
-      querySnapshot.forEach((doc) => {
-        data.push(doc.data());
+      onSnapshot(q, (querySnapshot) => {
+        setProducts(
+          querySnapshot.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+          }))
+        );
       });
-      setProducts(data);
     };
     getProducts();
   }, []);
@@ -56,6 +57,7 @@ const Products = () => {
                     bed={data.bedroom}
                     bathtub={data.bathroom}
                     area={data.m2}
+                    id={data.id}
                   />
                 );
               })}
