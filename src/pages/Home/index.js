@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react'
 import Header from '../../component/Header'
 import Search from '../../component/Search'
 import HeroSection from '../../component/HeroSection'
@@ -11,13 +11,16 @@ import ColumnSection from '../../component/ColumnSection'
 import FooterWidget from '../../component/FooterWidget'
 import TestimonialsSection from '../../component/TestimonialsSection'
 import FooterSection from '../../component/FooterSection'
+import Login from '../register/Login/Login'
 
 
-export default class index extends Component {
-    render() {
-        return (
-            <div>
-                <Header></Header>
+
+export default function index() {
+    const token = localStorage.getItem('token');
+   
+    return (
+        <div>
+          {token===null?(<Login/>):( <div> <Header></Header>
                 <Search></Search>
                 <HeroSection></HeroSection>
                 <TextContainer></TextContainer>
@@ -28,8 +31,9 @@ export default class index extends Component {
                 <ColumnSection></ColumnSection>
                 <FooterWidget></FooterWidget>
                 <TestimonialsSection></TestimonialsSection>
-                <FooterSection></FooterSection>
+                <FooterSection></FooterSection></div> )}
+               
             </div>
-        );
-    }
+    )
 }
+
