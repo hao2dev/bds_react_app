@@ -18,7 +18,7 @@ const AdminManager = () => {
                             </div>
                             <div className="span3">
                                 <h3>Mua hôm nay</h3>
-                                <p><a href="#" className="badge badge-inverse">8</a></p>
+                                <p><a href="#" className="badge badge-inverse ">8</a></p>
                             </div>
                             <div className="span3">
                                 <h3>Thông tin đang chờ xử lý</h3>

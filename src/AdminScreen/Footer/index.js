@@ -1,4 +1,8 @@
+
+import '../Footer/footer.css'
+
 const Footer = () => {
+
     return (
         <footer className="well">
             &copy; Chúng tôi là những chuyên gia nghiên cứu thị trường làm việc với khách hàng

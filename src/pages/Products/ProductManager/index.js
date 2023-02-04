@@ -6,8 +6,28 @@ import abroad from "../../../assets/img/index/abroad-classic01.jpg";
 import advice from "../../../assets/img/index/abroad-unique02.jpg";
 import { useSelector } from "react-redux";
 import { checkLikeProductSelector } from "../../../Redux/selector";
+import { db } from '../../../firebase/connect';
+import {
+  collection,
+  query,
+  orderBy,
+  onSnapshot,
+  doc,
+  deleteDoc,
+} from 'firebase/firestore';
 
 const ProductLikePage = () => {
+  // const handleDeleteProduct = async (record) => {
+  //   if (window.confirm(`Bạn có muốn xóa ${record.name} không?`) == true) {
+  //     const taskDocRef = doc(db, 'products', record.id);
+  //     try {
+  //       await deleteDoc(taskDocRef);
+  //       alert('Đã xóa thành công');
+  //     } catch (err) {
+  //       alert(err);
+  //     }
+  //   }
+  // };
   const productLike = JSON.parse(localStorage.getItem("productLike")) || [];
   return (
     <div>
@@ -15,7 +35,7 @@ const ProductLikePage = () => {
       <div className="container content-section">
         <hr />
         <h2 className="section-header">
-          <i className="bx bx-building-house" /> Dự án đã thêm
+          <i className="bx bx-building-house" /> Dự án đã thích
         </h2>
         <div className="cart-row">
           <span className="cart-item cart-header cart-column">DỰ ÁN</span>
@@ -48,7 +68,7 @@ const ProductLikePage = () => {
                       type="number"
                       defaultValue={1}
                     />
-                    <button className="btn btn-danger" type="button">
+                    <button className="btn btn-danger" type="button" >
                       Xoá
                     </button>
                   </div>

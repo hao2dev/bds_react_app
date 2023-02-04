@@ -52,6 +52,7 @@ const Products = () => {
                     img={doolin_house_dublin01}
                     price={data.price}
                     title={data.name}
+                    about={data.about}
                     bed={data.bedroom}
                     bathtub={data.bathroom}
                     area={data.m2}

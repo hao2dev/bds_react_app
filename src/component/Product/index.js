@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { checkLikeProduct } from '../../Redux/action';
 import { checkLikeProductSelector } from '../../Redux/selector';
 import AddToCart from '../../ultis/AddToCart';
-const Product = ({ img, price, title, bed, bathtub, area }) => {
+const Product = ({ img, price, title,about, bed, bathtub, area }) => {
   const [toggleAlert, setToggleAlert] = useState(false);
   const dispatch = useDispatch();
   const handleLikeProduct = () => {
@@ -17,6 +17,7 @@ const Product = ({ img, price, title, bed, bathtub, area }) => {
       img,
       price,
       title,
+      about,
       area,
     };
     dispatch(checkLikeProduct(product));
@@ -40,6 +41,7 @@ const Product = ({ img, price, title, bed, bathtub, area }) => {
           <hr />
           <h3>{title}</h3>
           <hr />
+          <p>{about}</p>
           <div className='property-details justify-content-between d-flex align-self-center'>
             <div>
               <i className='fas fa-bed mr-2 align-self-center' />
