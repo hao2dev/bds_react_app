@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import Header from '../Header';
+import ColumnSection from '../ColumnSection';
+import FooterSection from '../FooterSection';
+import doolin_house_dublin01 from '../../assets/img/index/doolin-house-dublin01.jpeg';
+import { Alert, Space } from 'antd';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { checkLikeProduct } from '../../Redux/action';
+import { checkLikeProductSelector } from '../../Redux/selector';
+import AddToCart from '../../ultis/AddToCart';
+const Product = ({ img, price, title,about, bed, bathtub, area }) => {
+=======
 import Header from "../Header";
 import ColumnSection from "../ColumnSection";
 import FooterSection from "../FooterSection";
@@ -9,6 +22,7 @@ import { checkLikeProduct } from "../../Redux/action";
 import { checkLikeProductSelector } from "../../Redux/selector";
 import AddToCart from "../../ultis/AddToCart";
 const Product = ({ img, price, title, bed, bathtub, area, id }) => {
+>>>>>>> c2a292ec54b60b02686625325330a3cf747a335f
   const [toggleAlert, setToggleAlert] = useState(false);
   const dispatch = useDispatch();
   const handleLikeProduct = () => {
@@ -17,6 +31,7 @@ const Product = ({ img, price, title, bed, bathtub, area, id }) => {
       img,
       price,
       title,
+      about,
       area,
       id,
     };
@@ -41,7 +56,12 @@ const Product = ({ img, price, title, bed, bathtub, area, id }) => {
           <hr />
           <h3>{title}</h3>
           <hr />
+<<<<<<< HEAD
+          <p>{about}</p>
+          <div className='property-details justify-content-between d-flex align-self-center'>
+=======
           <div className="property-details justify-content-between d-flex align-self-center">
+>>>>>>> c2a292ec54b60b02686625325330a3cf747a335f
             <div>
               <i className="fas fa-bed mr-2 align-self-center" />
               <span className>{bed}</span>

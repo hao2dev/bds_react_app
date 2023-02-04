@@ -7,6 +7,8 @@ import { db } from '../../../../firebase/connect';
 import { collection, addDoc, Timestamp } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 
+import '../Add/add.css'
+
 const Add = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -40,7 +42,7 @@ const Add = () => {
           <div className='span9'>
             <div className='row-fluid'>
               <div className='page-header'>
-                <h1>
+                <h1><i class='bx bxs-file-plus'></i>
                   Thêm sản phẩm
                   <small />
                 </h1>
@@ -48,7 +50,7 @@ const Add = () => {
               <form className='form-horizontal' onSubmit={handleSubmit}>
                 <fieldset>
                   <div className='control-group'>
-                    <label className='control-label'>Tên sản phẩm</label>
+                    <label className='control-label'><i class='bx bxs-rename' ></i> Tên sản phẩm</label>
                     <div className='controls'>
                       <input
                         type='text'
@@ -60,7 +62,7 @@ const Add = () => {
                     </div>
                   </div>
                   <div className='control-group'>
-                    <label className='control-label'>Mô tả</label>
+                    <label className='control-label'><i class='bx bxs-message-square-dots' ></i>Mô tả</label>
                     <div className='controls'>
                       <input
                         type='text'
@@ -72,7 +74,7 @@ const Add = () => {
                     </div>
                   </div>
                   <div className='control-group'>
-                    <label className='control-label'>Giá tiền</label>
+                    <label className='control-label'><i class='bx bxs-dollar-circle' ></i>Giá tiền</label>
                     <div className='controls'>
                       <input
                         type='number'
@@ -85,7 +87,7 @@ const Add = () => {
                     </div>
                   </div>
                   <div className='control-group'>
-                    <label className='control-label'>Số phòng ngủ</label>
+                    <label className='control-label'><i class='bx bxs-bed' ></i>Số phòng ngủ</label>
                     <div className='controls'>
                       <input
                         type='number'
@@ -98,7 +100,7 @@ const Add = () => {
                     </div>
                   </div>
                   <div className='control-group'>
-                    <label className='control-label'>Số phòng vệ sinh</label>
+                    <label className='control-label'><i class='bx bxs-bath' ></i>Số phòng vệ sinh</label>
                     <div className='controls'>
                       <input
                         type='number'
@@ -111,7 +113,7 @@ const Add = () => {
                     </div>
                   </div>
                   <div className='control-group'>
-                    <label className='control-label'>Diện tích (m2)</label>
+                    <label className='control-label'><i class='bx bxs-area' ></i>Diện tích (m2)</label>
                     <div className='controls'>
                       <input
                         type='number'

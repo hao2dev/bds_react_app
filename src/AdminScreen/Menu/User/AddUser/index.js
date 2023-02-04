@@ -7,6 +7,8 @@ import { auth, db } from "../../../../firebase/connect";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
 
+import '../AddUser/adduser.css'
+
 
 const AddUser = () => {
 
@@ -51,7 +53,7 @@ const AddUser = () => {
                             <form className="form-horizontal" onSubmit={handleSubmit}>
                                 <fieldset>
                                     <div className="control-group">
-                                        <label className="control-label" htmlFor="admin_id">Tài khoản</label>
+                                        <label className="control-label" htmlFor="admin_id"><i class='bx bxs-universal-access' ></i>Tài khoản</label>
                                         <div className="controls">
                                             <input name='users'
                                                 value={formData.users}
@@ -59,7 +61,7 @@ const AddUser = () => {
                                         </div>
                                     </div>
                                     <div className="control-group">
-                                        <label className="control-label" htmlFor="admin_name">Tên</label>
+                                        <label className="control-label" htmlFor="admin_name"><i class='bx bxs-rename' ></i>Tên</label>
                                         <div className="controls">
                                             <input name='names'
                                                 value={formData.names}
@@ -67,7 +69,7 @@ const AddUser = () => {
                                         </div>
                                     </div>
                                     <div className="control-group">
-                                        <label className="control-label" htmlFor="admin_password">Mật khẩu</label>
+                                        <label className="control-label" htmlFor="admin_password"><i class='bx bx-barcode' ></i>Mật khẩu</label>
                                         <div className="controls">
                                             <input name='passwords'
                                                 value={formData.passwords}
@@ -75,16 +77,26 @@ const AddUser = () => {
                                         </div>
                                     </div>
                                     <div className="control-group">
-                                        <label className="control-label" htmlFor="admin_phone">Điện thoại</label>
+                                        <label className="control-label" htmlFor="admin_phone"><i class='bx bxs-phone' ></i>Điện thoại</label>
                                         <div className="controls">
+<<<<<<< HEAD
+                                            <input type="text" className="input-xlarge" id="admin_phone" />
+                                        </div>
+                                    </div>
+                                    <div className="control-group">
+                                        <label className="control-label" htmlFor="admin_school"><i class='bx bxs-school' ></i>Trường</label>
+                                        <div className="controls">
+                                            <input type="text" className="input-xlarge" id="admin_school" />
+=======
                                             <input name='phones'
                                                 value={formData.phones}
                                                 onChange={handleChangeValue} type="text" className="input-xlarge" id="admin_phone" />
+>>>>>>> c2a292ec54b60b02686625325330a3cf747a335f
                                         </div>
                                     </div>
 
                                     <div className="control-group">
-                                        <label className="control-label" htmlFor="admin_status">Vị trí</label>
+                                        <label className="control-label" htmlFor="admin_status"><i class='bx bxs-location-plus' ></i>Vị trí</label>
                                         <div className="controls">
                                             <select id="admin_status" className="input-xlarge" name='managers'
                                                 onChange={handleChangeValue}
