@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import '../Header/Header.css'
 import logo from '../../assets/img/logo/logo.svg'
+// import { Avatar, Button } from '@mui/material'
+// import { auth } from '../../firebase/connect'
 
 export default class index extends Component {
     render() {
@@ -55,6 +57,15 @@ export default class index extends Component {
                                         <Link className="dropdown-item" to="/signup">Đăng ký</Link>
                                     </div>
                                 </li>
+                                {/* <li className="nav-item dropdown">
+                                    <a className="nav-link dropdown-toggle" href="/#" id="navbarDropdownThirdMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                       <Avatar></Avatar>
+                                       <p>{auth.currentUser.displayName}</p>
+                                       </a>
+                                    <div className="dropdown-menu" aria-labelledby="navbarDropdownThirdMenuLink">
+                                        <Button>Log Out</Button>
+                                    </div>
+                                </li> */}
                             </ul>
                         </div>
                     </div>

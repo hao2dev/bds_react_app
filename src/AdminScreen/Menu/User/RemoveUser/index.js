@@ -1,10 +1,34 @@
 import Footer from "../../../Footer";
 import Header from "../../../Header";
 import Navbar from "../../../Navbar";
-
+import { useState, useEffect } from "react";
+import { collection, deleteDoc, doc, getDocs, orderBy, query } from "firebase/firestore";
+import { db } from "../../../../firebase/connect";
 
 
 const RemoveUser = () => {
+    const [postLists, setPostList] = useState([]);
+
+    const postsRef = collection(db, 'accounts');
+    const getPost = query(postsRef, orderBy('users', 'desc'));
+    useEffect(() => {
+        const getPosts = async () => {
+            const data = await getDocs(getPost);
+            setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+        };
+        getPosts();
+    }, [postsRef]);
+    
+    const handleDelete = async (id) => {
+        if (window.confirm('Are you sure you want to delete this post?')) {
+          try {
+            await deleteDoc(doc(db, 'accounts', id));
+          } catch (error) {
+            console.log(error);
+          }
+        }
+      };
+
     return (
         <>
             <Navbar />
@@ -29,66 +53,23 @@ const RemoveUser = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr className="douban-list">
-                                        <td>100001</td>
-                                        <td>anhduc151</td>
-                                        <td>anhduc1510</td>
-                                        <td>123@#$</td>
-                                        <td>Người quản lý</td>
-                                        <td>2022-8-19 12:00</td>
-                                        <td><button className="remove">Xoá</button></td>
-                                    </tr> 
+                                    {postLists.map((post) => (
+                                        <tr className="douban-list">
+                                        <td>{post.id}</td>
+                                        <td>{post.names}</td>
+                                        <td>{post.users}</td>
+                                        <td>{post.passwords}</td>
+                                        <td>{(post.managers==1)?"Nhân viên bảo trì":"Nhân Viên quản lý"}</td>
+                                        <td><button onClick={(id)=>handleDelete(post.id)} className="remove">Xoá</button></td>
+                                    </tr>
+                                    ))}
+                                    
 
-                                    <tr className="douban-list">
-                                        <td>100002</td>
-                                        <td>anhduc151</td>
-                                        <td>anhduc1510</td>
-                                        <td>123@#$</td>
-                                        <td>Người quản lý</td>
-                                        <td>2022-8-19 12:00</td>
-                                        <td><button className="remove">Xoá</button></td>
-                                    </tr>
-                                    <tr className="douban-list">
-                                        <td>100003</td>
-                                        <td>anhduc151</td>
-                                        <td>anhduc1510</td>
-                                        <td>123@#$</td>
-                                        <td>Người quản lý</td>
-                                        <td>2022-8-19 12:00</td>
-                                        <td><button className="remove">Xoá</button></td>
-                                    </tr>
-                                    <tr className="douban-list">
-                                        <td>100004</td>
-                                        <td>anhduc151</td>
-                                        <td>anhduc1510</td>
-                                        <td>123@#$</td>
-                                        <td>Người quản lý</td>
-                                        <td>2022-8-19 12:00</td>
-                                        <td><button className="remove">Xoá</button></td>
-                                    </tr>
-                                    <tr className="douban-list">
-                                        <td>100005</td>
-                                        <td>anhduc151</td>
-                                        <td>anhduc1510</td>
-                                        <td>123@#$</td>
-                                        <td>Người quản lý</td>
-                                        <td>2022-8-19 12:00</td>
-                                        <td><button className="remove">Xoá</button></td>
-                                    </tr>
-                                    <tr className="douban-list">
-                                        <td>100006</td>
-                                        <td>anhduc151</td>
-                                        <td>anhduc1510</td>
-                                        <td>123@#$</td>
-                                        <td>Người quản lý</td>
-                                        <td>2022-8-19 12:00</td>
-                                        <td><button className="remove">Xoá</button></td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    <Footer/>
+                    <Footer />
                 </div>
             </div>
         </>
