@@ -58,6 +58,7 @@ export default function Register() {
         });
       };
       updateName();
+      
     } catch (error) {
       console.log(error.message);
     }

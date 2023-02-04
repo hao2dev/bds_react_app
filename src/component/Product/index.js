@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Header from '../Header';
 import ColumnSection from '../ColumnSection';
 import FooterSection from '../FooterSection';
@@ -9,6 +10,19 @@ import { checkLikeProduct } from '../../Redux/action';
 import { checkLikeProductSelector } from '../../Redux/selector';
 import AddToCart from '../../ultis/AddToCart';
 const Product = ({ img, price, title,about, bed, bathtub, area }) => {
+=======
+import Header from "../Header";
+import ColumnSection from "../ColumnSection";
+import FooterSection from "../FooterSection";
+import doolin_house_dublin01 from "../../assets/img/index/doolin-house-dublin01.jpeg";
+import { Alert, Space } from "antd";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { checkLikeProduct } from "../../Redux/action";
+import { checkLikeProductSelector } from "../../Redux/selector";
+import AddToCart from "../../ultis/AddToCart";
+const Product = ({ img, price, title, bed, bathtub, area, id }) => {
+>>>>>>> c2a292ec54b60b02686625325330a3cf747a335f
   const [toggleAlert, setToggleAlert] = useState(false);
   const dispatch = useDispatch();
   const handleLikeProduct = () => {
@@ -19,6 +33,7 @@ const Product = ({ img, price, title,about, bed, bathtub, area }) => {
       title,
       about,
       area,
+      id,
     };
     dispatch(checkLikeProduct(product));
     AddToCart(product);
@@ -28,42 +43,46 @@ const Product = ({ img, price, title,about, bed, bathtub, area }) => {
     setTimeout(() => setToggleAlert(false), 2000);
   }, [toggleAlert]);
   return (
-    <div className='col-md-6 col-lg-3'>
+    <div className="col-md-6 col-lg-3">
       {toggleAlert && (
-        <div className='message__box'>
-          <Alert message='Đã thêm vào mục yêu thích' type='success' showIcon />;
+        <div className="message__box">
+          <Alert message="Đã thêm vào mục yêu thích" type="success" showIcon />;
         </div>
       )}
-      <div className='box1'>
-        <img src={img} className='img-fluid' alt='Doolin House, Dublin' />
-        <div className='text'>
+      <div className="box1">
+        <img src={img} className="img-fluid" alt="Doolin House, Dublin" />
+        <div className="text">
           <span>{price}</span>
           <hr />
           <h3>{title}</h3>
           <hr />
+<<<<<<< HEAD
           <p>{about}</p>
           <div className='property-details justify-content-between d-flex align-self-center'>
+=======
+          <div className="property-details justify-content-between d-flex align-self-center">
+>>>>>>> c2a292ec54b60b02686625325330a3cf747a335f
             <div>
-              <i className='fas fa-bed mr-2 align-self-center' />
+              <i className="fas fa-bed mr-2 align-self-center" />
               <span className>{bed}</span>
             </div>
-            <div className='border-right dorder-danger' />
+            <div className="border-right dorder-danger" />
             <div>
-              <i className='fas fa-bath mr-2 align-self-center' />
+              <i className="fas fa-bath mr-2 align-self-center" />
               <span>{bathtub}</span>
             </div>
-            <div className='border-right dorder-danger' />
+            <div className="border-right dorder-danger" />
             <div>
-              <i className='fas fa-ruler-combined mr-2 align-self-center' />
+              <i className="fas fa-ruler-combined mr-2 align-self-center" />
               <span>{area}</span>
             </div>
           </div>
         </div>
         <hr />
-        <div className='text-center'>
+        <div className="text-center">
           <button onClick={handleLikeProduct}>
             Thích dự án
-            <i className='fas fa-long-arrow-alt-right ml-2' />
+            <i className="fas fa-long-arrow-alt-right ml-2" />
           </button>
         </div>
       </div>

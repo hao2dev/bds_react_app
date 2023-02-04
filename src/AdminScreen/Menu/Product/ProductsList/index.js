@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 
 export default function ProductsList() {
   const [products, setProducts] = useState([]);
-
+  
   useEffect(() => {
     const q = query(collection(db, 'products'), orderBy('created_at', 'desc'));
     onSnapshot(q, (querySnapshot) => {
