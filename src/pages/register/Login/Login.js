@@ -8,7 +8,8 @@ import {
 } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../../../firebase/connect';
-import { Paper ,
+import {
+  Paper,
   Box,
   Grid,
   TextField,
@@ -46,12 +47,14 @@ export default function Login() {
         data.username,
         data.password,
       );
+      const token = user?.user?.accessToken;
+      localStorage.setItem('token', token);
       history('/');
-      
+
 
     } catch (e) { }
   };
- 
+
 
 
   return (
@@ -91,7 +94,7 @@ export default function Login() {
                   fullWidth
                   placeholder="Email hoặc số điện thoại"
                   variant="outlined"
-                 
+
                   {...register('username')}
                   error={errors.username ? true : false}
                 />
